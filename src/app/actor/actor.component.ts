@@ -39,7 +39,7 @@ export class ActorComponent implements OnInit {
 
   // a new section to add a movie
   onSaveMovie() {
-    let obj = { title: this.title, year: this.year, actors: this.actors };
+    let obj = { title: this.title, year: this.year};
     this.dbService.addMovie(obj).subscribe(result => {
       this.onListMovies();
     });
